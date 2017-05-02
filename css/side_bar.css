@@ -1,0 +1,121 @@
+.header__icon {
+    position: fixed;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 2;
+    padding: 10px;
+}
+
+.header__icon--close {
+    margin-left: 200px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover {
+    background-color: #818181;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+/* The side navigation menu */
+.side-bar {
+    height: 100%; /* 100% Full-height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.side-bar .side-bar__link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.side-bar .side-bar__link:hover, .offcanvas .side-bar__link:focus{
+    color: #f1f1f1;
+}
+
+.side-bar--visible {
+    width: 250px;
+    border-right: 1px solid #333333;
+}
+
+.side-bar__menu {
+    min-height: 100%;
+}
+
+footer {
+    margin-top: -122px;
+    border-top: 1px solid #333333;
+    padding-top: 10px;
+    color: #333333;
+}
+
+.side_bar__footer-developer {
+    color: #818181;
+    text-decoration: none;
+    font-style: italic;
+    transition: color .3s;
+}
+
+.side_bar__footer-developer:hover{
+    color: #F9DBBD;
+}
+
+.side-bar__footer p {
+    font-size: 12px;
+    margin: 5px auto;
+    min-width: 100%;
+    text-align: center;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.content {
+    position: fixed;
+    transition: .5s;
+    padding: 50px 50px;
+}
+
+.content--wrapped {
+    margin-left: 251px;
+    padding: 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .side-bar {padding-top: 15px;}
+    .side-bar .side-bar__link {font-size: 15px;}
+}
