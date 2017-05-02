@@ -2,32 +2,49 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/side_bar.css">
     <script type="text/javascript" src="js/mosaic.js"></script>
     <script type="text/javascript" src="js/client.js"></script>
-    <title>Photo mosaic Challenge</title>
+    <script type="text/javascript" src="js/side_bar.js"></script>
+    <title>Mosaic Challenge</title>
   </head>
   <body>
-    <div class="content">
-      <div id="title"><h1>Photo mosaic Challenge</h1></div>
-      <div id="steps">
-        <ul>
-          <li>
-            <p><span class="step-number">1</span> Throw an image and let me build a photo mosaic.</p></li>
-          <li>
-            <span class="step-number">2</span>
-            <button onclick="initAll()">GO!</button>
-          </li>
-        </ul>
-      </div>
+    <div class="header">
 
-      <div class="photo"></div>
-      <div class="mosaic"></div>
+        <div class="header__icon" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="side-bar">
+            <div class="side-bar__menu">
+                <nav>
+                    <a class="side-bar__link" href="/">Home</a>
+                    <a class="side-bar__link" href="https://github.com/josevm/mosaic_challenge">Code base</a>
+                </nav>
+            </div>
+            <footer class="side-bar__footer">
+                <p>Developed by <a class="side_bar__footer-developer" href="#">Jose Villarnovo</a></p>
+                <p>All rights reserved</p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <h1 class="content__title">Mosaic Challenge</h1>
+
+        <div class="preview">
+            <p>Throw an image and let me build a photomosaic.</p>
+            <input class="preview__input" type="file" onchange="previewFile()">
+            <img id="preview__image" class="preview__image preview__image--hidden" src="" height="200px" alt="Image preview">
+        </div>
+
+        <div class="mosaic">
+            <img class="mosaic__watermark" src="">
+        </div>
 
     </div>
-    <footer>
-      <div class="footer-content">
-        <div class="owner">by <span class="developer">Jose Villarnovo</span></div>
-      </div>
-    </footer>
   </body>
 </html>
