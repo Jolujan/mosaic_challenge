@@ -1,3 +1,63 @@
 body{
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "texas_grunge";
+    src: url("texas_grunge.ttf");
+}
+
+.title {
+    min-width: 100%;
+    background: #221D23;
+}
+
+.content {
+    background-color: #333333;
+    width: 100%;
+    min-height:100%;
+}
+
+.step-number {
+    color: lightgoldenrodyellow;
+    font-size: 20px;
+}
+
+.footer-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-height: 50px;
+    min-width: 100%;
+    background: #221D23;
+}
+
+.owner {
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 20px;
+}
+
+.owner .developer:hover {
+    color: #F9DBBD;
+}
+
+h1 {
+    font-family: "texas_grunge";
+    color: #FCA17D;
+    text-align: center;
+}
+
+p {
+    color: #F9DBBD;
+}
+
+footer {
+    color: #333333;
+}
+
+link {
+    color: #0D0628;
 }
